@@ -10,7 +10,6 @@ script:
     - docker run willvac/eureka-server-test mvn test
 
 after_success:
-    - docker run willvac/eureka-server-test
     - docker build -t willvac/eureka-server -f Dockerfile.prod .
 
     # Login to the docker CLI
