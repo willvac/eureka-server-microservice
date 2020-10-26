@@ -1,4 +1,4 @@
 FROM maven:amazoncorretto
-WORKDIR ./eureka-server
+WORKDIR /eureka-server
 COPY ./ ./
 CMD ["mvn","spring-boot:run"]
