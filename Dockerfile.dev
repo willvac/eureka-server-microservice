@@ -1,4 +1,5 @@
 FROM maven:amazoncorretto
 WORKDIR /eureka-server
 COPY ./ ./
-CMD ["mvn","spring-boot:run"]
+RUN mvn clean install
+CMD ["mvn", "spring-boot:run"]

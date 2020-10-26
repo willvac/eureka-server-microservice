@@ -1,7 +1,7 @@
 FROM maven:amazoncorretto
 WORKDIR /eureka-server
 COPY ./ ./
-CMD ["mvn","clean", "install"]
+RUN mvn clean install
 
 FROM amazoncorretto:11
 WORKDIR /eureka-server
